@@ -5,6 +5,9 @@ stages:
 hello_world:
   stage: tf_plan
   image: alpine:3.14.0
+  only:
+    refs:
+      - fake_master
   script:
     - echo 'hello world' 
-
+  

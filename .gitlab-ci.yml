@@ -1,0 +1,10 @@
+stages:
+  - tf_plan
+  - tf_apply
+  
+hello_world:
+  stage: tf_plan
+  image: alpine:3.14.0
+  script:
+    - echo 'hello world' 
+

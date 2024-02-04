@@ -2,9 +2,13 @@ stages:
   - tf_plan
   - tf_apply
   
-hello_world:
+terraform plan dev:
   stage: tf_plan
-  image: alpine:3.14.0
+  image: hashicorp/terraform:0.13.5
+  only:
+    refs:
+      - fake_master
   script:
-    - echo 'hello world' 
-
+    - cd terraform/environment/dev
+    - terraform init
+  

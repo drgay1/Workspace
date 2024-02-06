@@ -10,5 +10,5 @@ terraform plan dev:
       - fake_master
   script:
     - cd terraform/environment/dev
-    - terraform init
+    - terraform init 
   
